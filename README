@@ -1,0 +1,17 @@
+Read Me
+Nick Jaton
+
+UPGMA
+
+The file using the prebuilt UPGMA works as expected.
+This program was created to better understand the algorithm used in UPGMA.
+The program sorts as it should but will need updating if the user wants to use it on a different matrix size or wants the values outputed in a different way.
+
+UPGMA w/Loop
+
+Hello, This program is very similar to the last UPGMA program that I uploaded. The only difference is that this program is inside of a while loop. This should allow the user to use the program on a much larger matrix. Hopefully, this program inspires you in some way when working on your own UPGMA program!
+
+
+QuickTTest
+
+This program was created to create a column of p-values that I can move over to excel to reorganize and input into an online database. This program will also count the number of significant values. 
