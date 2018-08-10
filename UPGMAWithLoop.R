@@ -21,39 +21,39 @@ SC1 = matrix()
 
 #-------------------------------------------------------------------------------------------
 while(numrow > LVal) 
-  {
-SC1 <- which(New_Set == min(New_Set [New_Set >= 1]), arr.ind = TRUE)
-#This basically just allows us to choose the first "lowest value" not all.
-print(SC1)
+{
+  SC1 <- which(New_Set == min(New_Set [New_Set >= 1]), arr.ind = TRUE)
+  #This basically just allows us to choose the first "lowest value" not all.
+  print(SC1)
 
-i <- SC1[1]
-j <- SC1[2]
+  i <- SC1[1]
+  j <- SC1[2]
 
-print(i)
-print(j)
+  print(i)
+  print(j)
 
-#At this point I am getting the letter associated by each row
-k1 <- arrayInd(i, dim(New_Set))
-R1 <-rownames(New_Set)[k1[,1]]
-k2 <- arrayInd(j, dim(New_Set))
-R2 <-rownames(New_Set)[k2[,1]]
-print(R1)
-print(R2)
+  #At this point I am getting the letter associated by each row
+  k1 <- arrayInd(i, dim(New_Set))
+  R1 <-rownames(New_Set)[k1[,1]]
+  k2 <- arrayInd(j, dim(New_Set))
+  R2 <-rownames(New_Set)[k2[,1]]
+  print(R1)
+  print(R2)
 
-#Create a list to start organizing row names 
-TMP <- list(R1,R2)
-LETLIST[[i]] <- TMP
+  #Create a list to start organizing row names 
+  TMP <- list(R1,R2)
+  LETLIST[[i]] <- TMP
 
-# we need to find how to combine each cell that is is i & j and create a new column from it. 
-New_Set <- cbind(New_Set, MERGE1 = 0)
-New_Set <- rbind(New_Set, MERGE1 = (New_Set[i,]+New_Set[j,])/2)
-print(New_Set)
+  # we need to find how to combine each cell that is is i & j and create a new column from it. 
+  New_Set <- cbind(New_Set, MERGE1 = 0)
+  New_Set <- rbind(New_Set, MERGE1 = (New_Set[i,]+New_Set[j,])/2)
+  print(New_Set)
 
-#remove used rows
-New_Set <- New_Set[-i:-j,-i:-j]
-print(New_Set)
+  #remove used rows
+  New_Set <- New_Set[-i:-j,-i:-j]
+  print(New_Set)
 
-numrow <- numrow - 1
+  numrow <- numrow - 1
 } 
 #--------------------------------------------------------------------------------------------
 #Print final list, the list will print merge1, merge 2, etc not the initial values.
