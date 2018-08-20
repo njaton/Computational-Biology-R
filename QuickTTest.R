@@ -17,7 +17,7 @@ for(R in 1:2114){
   #Check to see if we have the right score amount
   if (NewTable[R] <= .05)
     
-    TTestScore = TTestScore + 1
+  TTestScore = TTestScore + 1
   print(TTestScore)
   
 }
